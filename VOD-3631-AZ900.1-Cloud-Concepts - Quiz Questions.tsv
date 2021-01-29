@@ -1,0 +1,128 @@
+Video # From Outline	Video Title (From Outline)	Question Count	Question	Answer	Correct	Image File (Optional)
+2	What is the Cloud?	1	Which of the following definitiions represents a hybrid-cloud?			
+				Resources hosted by a cloud provider	No	
+				Resources hosted in your data center	No	
+				Resources hosted by a cloud provider working with seemlessly resources hosted in your data center	Yes	
+				Windows Server and Linux virtual machines hosted by a cloud provider	No	
+			Office 365 represents which type of cloud service?			
+				Infrastructure-as-a-Service	No	
+				Platform-as-a-Service	No	
+				Software-as-a-Service	Yes	
+				Dedicated-Hardware-as-a-Service	No	
+3	What is Azure?		Which of these tools would be the easiest to use for an administrator who does not write code or script?			
+				Azure Portal	Yes	
+				Azure PowerShell	No	
+				Azure CLI	No	
+				REST API	No	
+			Who operates the Azure China cloud?			
+				Microsoft	No	
+				21Vianet	Yes	
+				Alibaba	No	
+				SAP	No	
+4	Why Choose the Cloud?		Which of the following is not an advantage of moving to the cloud?			
+				No equipment purchase	No	
+				No capacity limitations	No	
+				Utilize existing capital investment	Yes	
+				Only pay for what you use	No	
+			Which of the following are functional advantages of the cloud? (select 2)			
+				Reduced administrative overhead	Yes	
+				Built-in access and allocation managerment	Yes	
+				Utilize existing capital investment	No	
+				Purchasing licensing up front	No	
+5	Azure Management Tools		Which of the following operations can be executed from the Azure portal? (choose 3)			
+				Create a new virtual machine	Yes	
+				Stop a virtual machine	Yes	
+				Delete a virtual machine	Yes	
+				Migrate a virtual machine from Azure to AWS	No	
+			Which of the following administrative tools can be run from an Android phone? (choose 2)			
+				Azure portal	Yes	
+				Azure PowerShell	No	
+				Azure CLI	No	
+				Cloud shell	Yes	
+6	Azure Subscription Management		Which of the following are differences between a pay-as-you-go subscription and an enterprise agreement subscription? (choose 2)			
+				Enterprise agreements use departments to organize subscriptions	Yes	
+				Enterprise agreements use management groups to organize subscriptions	No	
+				Enterprise agreements use spending quotas	Yes	
+				Enterprise agreements use budgets	No	
+			Which of the following statements are true? (choose 2)			
+				Management groups can container other management groups	Yes	
+				Management groups can contain subscriptions	Yes	
+				Management groups can contain tenants	No	
+				Management groups can container resource groups	No	
+7	Azure Cost Planning		Which of the following factors does not effect Azure cost?			
+				Size/capacity	No	
+				Region	No	
+				Performance tier	No	
+				Data uploaded to Azure (ingress)	Yes	
+			Function apps are an example of which pricing model?			
+				Capacity-based pricing	No	
+				Consumption-based pricing	Yes	
+				Fee-based pricing	No	
+				Performance tier pricing	No	
+8	Azure Cost Management Best Practices		Which of the following can generate alerts when spending crosses a pre-defined level for a pay-as-you-go subscription?			
+				Budget	Yes	
+				Spending quota	No	
+				Spending limit	No	
+				Licensing monitor	No	
+			How can resource tags be used for cost management?			
+				Assign a budget to a tag	No	
+				Limit resource types that can be created	No	
+				Limit the size of virtual machines that can be created	No	
+				Analyze costs by custom attributes	Yes	
+			Which of the following cost controls can be applied using policies? (choose 2)			
+				Assign a budget to a resource group	No	
+				Limit resource types that can be created	Yes	
+				Limit the size of virtual machines that can be created	Yes	
+				Analyze costs by custom attributes	No	
+9	Azure Cost Management Tools		Which of the following cost factors will the cost advisor monitor? (choose 2)			
+				Excess licensing	No	
+				Unassociated public IP addresses	Yes	
+				Unprovisioned ExpressRoute circuits	Yes	
+				Unused private IP addresses	No	
+			Which of the following tools will provide an estimated cost savings for moving a workload into Azure?			
+				Azure pricing calculator	No	
+				Azure TCO calculator	Yes	
+				Azure cost management	No	
+				Azure Cost advisor	No	
+10	Azure Support		What is the least expensive suupport plan that includes access to support engineers by phone?			
+				Basic	No	
+				Developer	No	
+				Standard	Yes	
+				Professional direct	No	
+				Premier	No	
+			What is the least expensive suupport plan that includes a response time under 15 minutes?			
+				Basic	No	
+				Developer	No	
+				Standard	No	
+				Professional direct	No	
+				Premier	Yes	
+11	Azure Service Level Agreements		What Azure feature must you use to get a 99.99% availability SLA for a virtual machine workload?			
+				A single virtual machine using premium disks	No	
+				A single virtual machine provisioned in an availability set	No	
+				Multiple virtual machines provisioned in an availability set	No	
+				Multiple virtual machines provisioned in different availability zones	Yes	
+			You have a workload that requires a virtual machine and a web app.  The virtual machine uses premium storage.  The web app has an availability SLA of 99.95%.  What is the composite SLA for the solution?			
+				99.95%	No	
+				99.90%	No	
+				99.93%	No	
+				99.85%	Yes	
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+15						

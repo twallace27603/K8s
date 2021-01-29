@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@if(ViewBag.Debug) {
+    <h4>@ViewBag.Sql</h4>
+    <h4>@ViewBag.Mongo</h4>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <select id="quizList"></select>
+            <div id="quiz"></div>
+        </div>
+        <div class="col-sm-3 stats" id="stats">
+            <button id="load">Load Documents</button>
+           
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  k8s:
+    image: k8s
+    depends_on: 
+      - mongo
+      - db
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80
+    environment:
+      - 'SQLConnection=Server=db;Database=Trivia;Uid=sa;Pwd=B@dpa55w0rd;'
+      - MongoServer=mongo
+
+  mongo:
+    image: twallace27603/k8smongo:1.0
+  db:
+    image: twallace27603/k8ssql:1.0
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=B@dpa$$w0rd
+      - MSSQL_PID=Express
