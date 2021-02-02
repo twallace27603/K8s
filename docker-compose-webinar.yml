@@ -4,19 +4,16 @@ version: '3.4'
 
 services:
   k8s:
-    image: k8s
+    image: twallace27603/k8swebapp:1.0
     depends_on: 
       - mongo
       - db
-    build:
-      context: .
-      dockerfile: ./Dockerfile
     ports:
-      - 80
+      - 80:80
     environment:
       - 'SQLConnection=Server=db;Database=Trivia;Uid=sa;Pwd=B@dpa55w0rd;'
       - MongoServer=mongo
-      - Debug=False
+      - Debug=no
 
   mongo:
     image: twallace27603/k8smongo:1.0
