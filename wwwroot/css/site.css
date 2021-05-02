@@ -78,3 +78,7 @@ body {
   min-height: 400px;
   border-radius: 20px;
 }
+
+.hidden {
+  display: none;
+}

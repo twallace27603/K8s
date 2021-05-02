@@ -1,19 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@if(ViewBag.Debug) {
+@if (ViewBag.Debug)
+{
     <h4>@ViewBag.Sql</h4>
     <h4>@ViewBag.Mongo</h4>
 }
-<div class="container">
-    <div class="row">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item"><a id="info-tab" class="nav-link active " href="#info" data-toggle="tab" role="tab"
+            aria-controls="info" aria-selected="true">App
+            Info</a></li>
+    <li class="nav-item"><a id="containers-tab" class="nav-link " href="#containers" data-toggle="tab" role="tab"
+            aria-controls="containers" aria-selected="false">Containers</a></li>
+    <li class="nav-item"><a id="monitoring-tab" class="nav-link " href="#monitoring" data-toggle="tab" role="tab"
+            aria-controls="monitoring" aria-selected="false">Monitoring</a></li>
+</ul>
+<div class="tab-content">
+
+
+    <div id="info" class="tab-pane active" aria-labelledby="info-tab">
+        App info
+    </div>
+    <div id="containers" class="tab-pane" aria-labelledby="containers-tab">
         <div class="col-sm-9">
             <select id="quizList"></select>
             <div id="quiz"></div>
         </div>
         <div class="col-sm-3 stats" id="stats">
             <button id="load">Load Documents</button>
-           
+
         </div>
+    </div>
+    <div id="monitoring" class="tab-pane" aria-labelledby="monitoring-tab">
+        monitoring
     </div>
 </div>
