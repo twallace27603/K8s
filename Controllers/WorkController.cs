@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using INE.K8s.Models;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using System.Threading;
+
 
 namespace K8s.Controllers
 {
@@ -36,7 +38,7 @@ namespace K8s.Controllers
         }
 
         [HttpGet("load")]
-       public async Task<ActionResult<int>> load(string id)
+        public async Task<ActionResult<int>> load(string id)
         {
             // TODO: Your code here
             var context = new MongoContext(_config.GetValue<string>("MongoServer"));
@@ -44,55 +46,57 @@ namespace K8s.Controllers
         }
 
         [HttpGet("info")]
-       public ActionResult<Info> info()
+        public ActionResult<Info> info()
         {
             // TODO: Your code here
             var info = new Info();
-            foreach(var hdr in HttpContext.Request.Headers) {
+            foreach (var hdr in HttpContext.Request.Headers)
+            {
                 info.headers.Add(hdr.Key, hdr.Value);
             }
-            foreach(var route in HttpContext.Request.RouteValues) {
+            foreach (var route in HttpContext.Request.RouteValues)
+            {
                 info.routeValues.Add(route.Key, route.Value.ToString());
             }
             var envVars = Environment.GetEnvironmentVariables();
-            foreach(var key in envVars.Keys) {
+            foreach (var key in envVars.Keys)
+            {
                 info.envVariables.Add(key.ToString(), envVars[key].ToString());
             }
-
-
-
-
-
-
-
             return info;
         }
 
-        [HttpPost("")]
-        public async Task<ActionResult<string>> Poststring(string model)
+        [HttpGet("processor/{seconds}")]
+        public ActionResult<string> processor(int seconds)
         {
-            // TODO: Your code here
-            await Task.Yield();
-
-            return null;
+            Program.SetLoadData(true, (double)seconds);
+            return $"Set a processor load to run for {seconds} seconds";
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Putstring(int id, string model)
+       [HttpGet]
+        [Route("resultpayload/{size}/{generateErrors}/{delay}")]
+        public async Task<ActionResult<string>> ResponsePayload(int size, bool generateErrors, bool delay)
         {
-            // TODO: Your code here
-            await Task.Yield();
+            byte[] output = new byte[size];
+            var rand = new Random();
+            rand.NextBytes(output);
+            await Task.Run(() => { if (delay) Thread.Sleep(rand.Next(3000)); });
 
-            return NoContent();
+            if (generateErrors)
+            {
+                switch (rand.Next(9))
+                {
+                    case 1:
+                        return new NotFoundResult();
+                    case 2:
+                        throw new Exception("Sample exception");
+                }
+            }
+
+            return System.Text.Encoding.Default.GetString(output);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<string>> DeletestringById(int id)
-        {
-            // TODO: Your code here
-            await Task.Yield();
 
-            return null;
-        }
+
     }
 }

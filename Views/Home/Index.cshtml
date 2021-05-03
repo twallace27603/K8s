@@ -35,6 +35,17 @@
         </div>
     </div>
     <div id="monitoring" class="tab-pane" aria-labelledby="monitoring-tab">
-        monitoring
+        <div class="row">
+            <div class="col-md-4">
+                Number of Requests: <input type="number" min="1" max="2000" id="requests" /><button id="sendRequests">Send Requests</button><br/>
+                <input type="checkbox" id="errors"> &nbsp;Include Errors<br/>
+                <input type="checkbox" id="delay"> &nbsp;Include Delay<br/>
+                Seconds to load processor: <input type="number" min="30" max="600" id="seconds" /><button id="loadProcessor">Load Processor</button><br/>
+            </div>
+            <div class="col-md-7" id="monitoringOutput">
+                <div id="results"></div>
+                <div id="displayErrors"></div>
+            </div>
+        </div>
     </div>
 </div>
