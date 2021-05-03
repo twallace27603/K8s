@@ -13,7 +13,14 @@ $(document).ready(function () {
     var operations = []
 
     operations["info"] = function () {
-        alert("info");
+        $.get("/api/work/info").done(function (data) {
+            var output = "<h3>Environment</h3><table>";
+            for (var envKey in data.envVariables) {
+                output += "<tr><td>" + envKey + "</td><td>" + data.envVariables[envKey] + "</td></tr>"
+            };
+            output += "</table>";
+            $("#info div.content").html(output);
+        });
     }
     operations["containers"] = function () {
         if (!quizLoaded) {
