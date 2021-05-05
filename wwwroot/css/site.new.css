@@ -79,10 +79,8 @@ body {
   border-radius: 20px;
 }
 
-.hidden {
-  display: none;
-}
-
 .showboat {
- display:none;
+  font-size: x-large;
+  background-color:#fff ;
+  color: darkred;
 }
