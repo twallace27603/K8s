@@ -1,0 +1,2 @@
+az group create -n lab-monitor-rg -l eastus
+ az deployment group create -n labapp -g lab-monitor-rg --verbose --template-uri https://inedemoassets.blob.core.windows.net/labfiles/Cloud-App-Management/arm-lab-webapp-deployment.json
