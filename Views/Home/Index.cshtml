@@ -39,13 +39,41 @@
     </div>
     <div id="monitoring" class="tab-pane" aria-labelledby="monitoring-tab">
         <div class="row">
-            <div class="col-md-4">
-                Number of Requests: <input type="number" min="1" max="2000" id="requests" /><button id="sendRequests">Send Requests</button><br/>
-                <input type="checkbox" id="errors"> &nbsp;Include Errors<br/>
-                <input type="checkbox" id="delay"> &nbsp;Include Delay<br/>
-                Seconds to load processor: <input type="number" min="30" max="600" id="seconds" /><button id="loadProcessor">Load Processor</button><br/>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-4">
+                        Number of Requests:
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" min="1" max="2000" id="requests" />
+                    </div>
+                    <div class="col-md-3">
+                        <button id="sendRequests">Send Requests</button><br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <input type="checkbox" id="errors"> &nbsp;Include Errors<br />
+                <input type="checkbox" id="delay"> &nbsp;Include Delay
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                      Seconds to load processor:   
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" min="30" max="600" id="seconds" />
+                    </div>
+                    <div class="col-md-3">
+                        <button
+                    id="loadProcessor">Load Processor</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7" id="monitoringOutput">
+            <div class="col-md-4" id="monitoringOutput">
                 <div id="results"></div>
                 <div id="displayErrors"></div>
             </div>

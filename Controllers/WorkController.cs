@@ -48,6 +48,7 @@ namespace K8s.Controllers
         [HttpGet("info")]
         public ActionResult<Info> info()
         {
+            string[] restricted = { "AZURE_CLIENT_ID","AZURE_CLIENT_SECRET","AZURE_TENANT_ID"};
             // TODO: Your code here
             var info = new Info();
             foreach (var hdr in HttpContext.Request.Headers)
@@ -61,7 +62,10 @@ namespace K8s.Controllers
             var envVars = Environment.GetEnvironmentVariables();
             foreach (var key in envVars.Keys)
             {
-                info.envVariables.Add(key.ToString(), envVars[key].ToString());
+                if (!restricted.Contains(key))
+                {
+                    info.envVariables.Add(key.ToString(), envVars[key].ToString());
+                }
             }
             return info;
         }
