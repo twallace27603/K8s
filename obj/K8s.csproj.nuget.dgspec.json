@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Demos\\Webinars\\K8s\\K8s.csproj": {}
+    "D:\\bootcamps\\App Management\\K8s\\K8s.csproj": {}
   },
   "projects": {
-    "D:\\Demos\\Webinars\\K8s\\K8s.csproj": {
+    "D:\\bootcamps\\App Management\\K8s\\K8s.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demos\\Webinars\\K8s\\K8s.csproj",
+        "projectUniqueName": "D:\\bootcamps\\App Management\\K8s\\K8s.csproj",
         "projectName": "K8s",
-        "projectPath": "D:\\Demos\\Webinars\\K8s\\K8s.csproj",
+        "projectPath": "D:\\bootcamps\\App Management\\K8s\\K8s.csproj",
         "packagesPath": "C:\\Users\\tswwc\\.nuget\\packages\\",
-        "outputPath": "D:\\Demos\\Webinars\\K8s\\obj\\",
+        "outputPath": "D:\\bootcamps\\App Management\\K8s\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -66,6 +66,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[5.0.4, 5.0.4]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[5.0.4, 5.0.4]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[5.0.4, 5.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -75,6 +89,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }

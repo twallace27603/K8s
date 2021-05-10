@@ -533,3 +533,10 @@ $RECYCLE.BIN/
 
 bin/Debug/net5.0/K8s.dll
 bin/Debug/net5.0/*
+site.zip
+ine-eb-code.zip
+aws-linux-deployment-manifest.json
+obj/K8s.csproj.nuget.dgspec.json
+obj/K8s.csproj.nuget.dgspec.json
+obj/project.assets.json
+obj/project.nuget.cache
