@@ -25,7 +25,7 @@ namespace K8s.Controllers
         {
             ViewBag.Mongo = _config.GetValue<string>("MongoServer");
             ViewBag.Sql = _config.GetValue<string>("SQLConnection");
-            ViewBag.Debug = _config.GetValue<string>("Debug").ToLower()=="yes";
+            ViewBag.Debug = (!string.IsNullOrEmpty(_config.GetValue<string>("Debug"))) && (_config.GetValue<string>("Debug").ToLower() == "yes");
             return View();
         }
 
